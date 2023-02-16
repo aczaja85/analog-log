@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Hanalei&family=Monofett&family=Open+Sans:ital,wght@0,300;0,500;1,700&family=Rubik+Glitch&family=Slackey&display=swap');
+@import 'variables.scss';
+
+html {
+  background-color: $offwhite;
+  border-left: 10px solid $offblack;
+  border-right: 10px solid $offblack;
+  border-top: 40px solid $offblack;
+  border-bottom: 100px solid $offblack;
+}
+body {
+  margin: 0;
+}
+.mainContainer {
+  //font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  //padding: 4rem;
+  //margin: 0.5rem 4rem 6rem 4rem;
+  align-items: center;
+  background-color: $offwhite;
+
+  h1 {
+    font-family: 'Monofett', cursive;
+    //font-style: italic;
+    font-size: 6rem;
+    text-align: center;
+    background-color: $offblack;
+    color: $offwhite;
+    border-radius: 2px;
+    border-bottom-left-radius: 20px;
+    margin: 0 0 0.67em 50%;
+  }
+
+  //font-size: 1.5vw;
+}
+
+.entryCreatorContainer {
+  //border: solid;
+  background: $offwhite;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 30rem;
+  //box-shadow: 5px 5px 2px $offblack;
+
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  input,
+  label,
+  select {
+    background-color: $offwhite;
+    margin: 0.2rem;
+  }
+  input,
+  select {
+    border: none;
+    border-bottom: 1px solid $offblack;
+    width: 9rem;
+  }
+  input:focus,
+  select:focus {
+    outline: 1px solid $offblack;
+  }
+  select option:hover {
+    background: $muteOrange2;
+  }
+  button {
+    font-family: 'Hanalei', cursive;
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 0.75rem 1rem;
+    background: $offwhite;
+    color: $offblack;
+    border-radius: 20px;
+    border: none;
+    //font-family: 'Open Sans', sans-serif;
+    //box-shadow: 5px 5px 2px $muteOrange2;
+  }
+  button:hover {
+    color: $muteOrange2;
+  }
+}
+
+.entryContainer {
+  display: grid;
+  //grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(380px, 2fr));
+  max-width: 1500px;
+  padding: 0 3rem;
+}
+
+.entryItem {
+  display: grid;
+  grid-template-columns: 0.5fr 3fr;
+  margin: 0.5rem;
+  //border: 1px solid $offblack;
+  border-radius: 10px;
+  //box-shadow: 5px 5px 2px $offblack;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  align-items: center;
+
+  background: $white;
+  h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: $offblack;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    margin: 0.5rem 2rem;
+    font-style: italic;
+  }
+
+  p {
+    padding-left: 1rem;
+  }
+  button {
+    background-color: $offblack;
+    color: $offwhite;
+    border: none;
+    //font-family: 'Open Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+  }
+  button:hover {
+    font-family: 'Creepster', cursive;
+    font-size: 2rem;
+    color: $black;
+    background-color: $white;
+    box-shadow: 0 3px 10px red;
+  }
+}
+//light background options with tabs
+// .entryItem {
+//   display: grid;
+//   grid-template-columns: 0.5fr 3fr;
+//   margin: 0.5rem;
+//   //padding: 0.5rem;
+//   border: 1px solid $offblack;
+//   border-radius: 10px;
+//   box-shadow: 5px 5px 2px $offblack;
+//   align-items: center;
+//   //background: linear-gradient($white, $offwhite);
+//   background: $offwhite;
+//   h4 {
+//     background-color: $offblack;
+//     color: $white;
+//     padding: 0.5rem;
+//     font-style: italic;
+//     border-top-right-radius: 20px;
+//     border-bottom-right-radius: 20px;
+//   }
+
+//   p {
+//     padding-left: 2rem;
+//   }
+// }
+
+// option for entries with dark background
+// .entryItem {
+//   display: grid;
+//   grid-template-columns: 0.5fr 3fr;
+//   margin: 0.5rem;
+//   //padding: 0.5rem;
+//   border: 1px solid $offblack;
+//   border-radius: 10px;
+//   box-shadow: 5px 5px 2px $offblack;
+//   align-items: center;
+//   background: $offblack;
+//   color: $offwhite;
+
+//   h4 {
+//     background-color: $offwhite;
+//     color: $black;
+//     padding: 0.5rem;
+//     font-style: italic;
+//     border-top-right-radius: 20px;
+//     border-bottom-right-radius: 20px;
+//   }
+
+//   p {
+//     padding-left: 2rem;
+//   }
+// }
