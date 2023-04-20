@@ -4,7 +4,6 @@ import { render } from 'react-dom';
 //Entry component displays
 class Entry extends Component {
   render() {
-    //console.log('Entry props', this.props);
     return (
       <div className="entryItem" id={this.props.album}>
         <h4>Artist</h4>
@@ -24,6 +23,7 @@ class Entry extends Component {
         >
           Delete
         </button>
+        <button className="pairBtn">Pair me?</button>
       </div>
     );
   }
