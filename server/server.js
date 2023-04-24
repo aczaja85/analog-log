@@ -47,14 +47,3 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
-
-//test from early set up, was above app.listen
-// const sampleEntries = [
-//     { artist: 'artistName', album: 'albumName', mood: 'happy', date: 'today' },
-//     { artist: 'artistName2', album: 'albumName2', mood: 'sad', date: 'tomorrow' },
-//   ];
-
-//   app.get('/api/entries', (req, res) => {
-//     console.log('hello from server.js');
-//     res.status(200).json(sampleEntries);
-//   });
