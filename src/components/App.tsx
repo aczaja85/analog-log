@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import MainContainer from './MainContainer';
+
+const consumerKey = 'git ';
+const consumerSecret = '';
 
 const App: React.FC = () => {
   return (
