@@ -35,6 +35,7 @@ function EntryCreator({ addEntry }: EntryCreatorProps) {
       artist: artist,
       album: album,
       mood: mood,
+      token:'',
     };
     addEntry(newEntry);
     setAlbum('');

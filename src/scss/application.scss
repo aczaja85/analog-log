@@ -86,8 +86,8 @@ body {
 }
 
 .entryItem {
-  display: grid;
-  grid-template-columns: 0.5fr 3fr;
+  // display: grid;
+  // grid-template-columns: 0.5fr 3fr;
   margin: 0.5rem;
   border-radius: 10px;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -96,6 +96,19 @@ body {
     0 100px 80px rgba(0, 0, 0, 0.12);
   align-items: center;
   background: $offwhite;
+
+  img {
+    display: block;
+    // margin-left: auto;
+    // margin-right: auto;
+    width: 100%;
+  }
+
+  .entryInfo {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+    margin: 0.5rem;
+  }
 
   h4 {
     font-family: Arial, Helvetica, sans-serif;
