@@ -3,6 +3,7 @@ import mongoose, { Schema as SchemaM, model, Document } from 'mongoose';
 interface AlbumDocument extends Document {
   artist: string;
   album: string;
+  coverArt: string;
   mood: string;
   date: Date;
 }
@@ -21,6 +22,7 @@ const Schema = mongoose.Schema;
 const albumsSchema = new Schema<AlbumDocument>({
   artist: { type: String, required: true },
   album: { type: String, required: true },
+  coverArt: { type: String, required: true },
   mood: { type: String, required: true },
   date: { type: Date, default: Date.now },
 });

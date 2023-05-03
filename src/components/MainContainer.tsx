@@ -3,9 +3,13 @@ import EntryCreator from './EntryCreator';
 import Entry from './Entry';
 import { SavedEntry, NewAlbum } from '../types';
 
+type MainContainerProps = {
+  token: string;
+};
+
 //container will hold state, render logcreator and log card
-function MainContainer() {
-  const [entries , setEntries] = useState<SavedEntry[]>([]);
+function MainContainer({ token }: MainContainerProps) {
+  const [entries, setEntries] = useState<SavedEntry[]>([]);
 
   //get stored entries from DB, and populate entries
   useEffect(() => {
@@ -17,7 +21,8 @@ function MainContainer() {
   }, []);
 
   // will add a new entry to DB
-  function addEntry(newAlbum: NewAlbum ) {
+  function addEntry(newAlbum: NewAlbum) {
+    newAlbum.token = token;
     fetch('/api/album', {
       method: 'POST',
       headers: {
@@ -51,6 +56,7 @@ function MainContainer() {
             id={record._id}
             artist={record.artist}
             album={record.album}
+            coverArt={record.coverArt}
             mood={record.mood}
             date={record.date}
             deleteEntry={deleteEntry}
