@@ -11,5 +11,4 @@ export interface NewAlbum {
   artist: string;
   album: string;
   mood: string;
-  token: string;
 }

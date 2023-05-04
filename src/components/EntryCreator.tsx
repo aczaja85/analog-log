@@ -31,11 +31,13 @@ function EntryCreator({ addEntry }: EntryCreatorProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const date = new Date();
+    const formatDate = date.toLocaleDateString();
     const newEntry = {
       artist: artist,
       album: album,
       mood: mood,
-      token:'',
+      date: formatDate,
     };
     addEntry(newEntry);
     setAlbum('');
