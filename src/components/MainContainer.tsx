@@ -3,12 +3,9 @@ import EntryCreator from './EntryCreator';
 import Entry from './Entry';
 import { SavedEntry, NewAlbum } from '../types';
 
-type MainContainerProps = {
-  token: string;
-};
 
 //container will hold state, render logcreator and log card
-function MainContainer({ token }: MainContainerProps) {
+function MainContainer() {
   const [entries, setEntries] = useState<SavedEntry[]>([]);
 
   //get stored entries from DB, and populate entries
@@ -22,7 +19,6 @@ function MainContainer({ token }: MainContainerProps) {
 
   // will add a new entry to DB
   function addEntry(newAlbum: NewAlbum) {
-    newAlbum.token = token;
     fetch('/api/album', {
       method: 'POST',
       headers: {
