@@ -5,7 +5,7 @@ interface AlbumDocument extends Document {
   album: string;
   coverArt: string;
   mood: string;
-  date: Date;
+  date: string;
 }
 
 const MONGO_URI =
@@ -24,7 +24,7 @@ const albumsSchema = new Schema<AlbumDocument>({
   album: { type: String, required: true },
   coverArt: { type: String, required: true },
   mood: { type: String, required: true },
-  date: { type: Date, default: Date.now },
+  date: { type: String, required:true },
 });
 
 const Album = model<AlbumDocument>('album', albumsSchema);
