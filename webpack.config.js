@@ -1,8 +1,10 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+// import path from 'path';
+// import HTMLWebpackPlugin from 'html-webpack-plugin';
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: './src/index.tsx',
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.js',
