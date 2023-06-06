@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  mongodb:
+    image: 'mongo'
+    networks:
+      - mongodbntw
+  app:
+    build: ./
+    ports:
+      - '3000:3000'
+    networks:
+      - mongodbntw
+networks:
+  mongodbntw:
+    driver: bridge
