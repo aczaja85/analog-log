@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  app:
+    container_name: analog-log
+    image: analog-log
+    build:
+      context: ./
+    ports:
+      - '3000:3000'
+    networks:
+      - mongodbntw
+    depends_on:
+      - mongodb
+
+  mongodb:
+    container_name: mongodb
+    image: 'mongo'
+    networks:
+      - mongodbntw
+networks:
+  mongodbntw:
+    driver: bridge

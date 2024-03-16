@@ -8,11 +8,10 @@ interface AlbumDocument extends Document {
   date: string;
 }
 
-const MONGO_URI =
-  'mongodb+srv://aczaja:PS58Yyohat9gIFko@cluster0.ffnmyn3.mongodb.net/?retryWrites=true&w=majority';
 
+const MONGO_NWC_URI = 'mongodb://mongodb:27017/log';
 mongoose
-  .connect(MONGO_URI)
+  .connect(MONGO_NWC_URI)
   .then(() => console.log('Connected to Mongo DB.'))
   .catch((err) => console.log(err));
 
@@ -24,7 +23,7 @@ const albumsSchema = new Schema<AlbumDocument>({
   album: { type: String, required: true },
   coverArt: { type: String, required: true },
   mood: { type: String, required: true },
-  date: { type: String, required:true },
+  date: { type: String, required: true },
 });
 
 const Album = model<AlbumDocument>('album', albumsSchema);
