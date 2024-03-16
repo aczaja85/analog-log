@@ -1,4 +1,4 @@
-import express, {Request, Response, NextFunction} from 'express'
+import express, { Request, Response, NextFunction } from 'express';
 import path from 'path';
 import cors from 'cors';
 import apiRouter from './routes/api';
@@ -13,12 +13,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 
-
-
 //  * define route handlers
 //  */
 app.use('/api', apiRouter);
 
+app.use(express.static(path.join(__dirname, '../dist/')));
 // catch-all route handler for any requests to an unknown route
 app.use((req, res) =>
   res.status(404).send('This is not the page you are looking for...')
