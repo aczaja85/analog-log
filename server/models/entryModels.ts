@@ -8,11 +8,8 @@ interface AlbumDocument extends Document {
   date: string;
 }
 
-//const MONGO_URI =
-//  'mongodb+srv://aczaja:PS58Yyohat9gIFko@cluster0.ffnmyn3.mongodb.net/?retryWrites=true&w=majority';
 
-// const MONGO_C_URI = 'mongodb://172.17.0.2:27017/log';
-const MONGO_NWC_URI = 'mongodb://mongodbntw:27017/log';
+const MONGO_NWC_URI = 'mongodb://mongodb:27017/log';
 mongoose
   .connect(MONGO_NWC_URI)
   .then(() => console.log('Connected to Mongo DB.'))
